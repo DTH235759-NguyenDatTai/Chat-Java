@@ -1,5 +1,6 @@
 package com.tai.chat.controller;
 
+import com.tai.chat.dto.ChatMessage;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,5 +12,10 @@ public class TestController {
     @GetMapping("api/test")
     public String test() {
         return "Server đang chạy";
+    }
+    @GetMapping("api/testing-message")
+    public ChatMessage testMessage() {
+        ChatMessage message = new ChatMessage("Tai", "Xin Chào");
+        return message;
     }
 }
