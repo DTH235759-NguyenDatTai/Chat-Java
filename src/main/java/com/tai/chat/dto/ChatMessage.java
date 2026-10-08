@@ -2,14 +2,16 @@ package com.tai.chat.dto;
 
 public class ChatMessage {
     private String sender;
+    private String reciever;
     private String content;
 
     public ChatMessage() {
 
     }
 
-    public ChatMessage(String sender, String content) {
+    public ChatMessage(String sender,String reciever, String content) {
         this.sender = sender;
+        this.reciever = reciever;
         this.content = content;
     }
     
@@ -19,6 +21,14 @@ public class ChatMessage {
 
     public void setSender(String sender) {
         this.sender = sender;
+    }
+
+    public String getReciever() {
+        return reciever;
+    }
+
+    public void setReciever(String reciever) {
+        this.reciever = reciever;
     }
 
     public String getContent() {
