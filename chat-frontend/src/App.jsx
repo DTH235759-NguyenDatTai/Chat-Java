@@ -23,7 +23,7 @@ function App() {
 
         // Chay khi ket noi thanh cong
         client.onConnect = function () {
-            setStatus("Da ket noi");
+            setStatus("Đã kết nối");
 
             // Dang ky nghe kenh /topic/public
             client.subscribe("/topic/public", function (frame) {
